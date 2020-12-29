@@ -1,0 +1,11 @@
+[flake8]
+max-line-length=100
+docstring-convention=all
+import-order-style=pycharm
+application_import_names=hackerspace_site
+exclude=__pycache__, venv, .venv, **/migrations/**, .cache/
+ignore=
+    # Type Annotations
+    ANN002,ANN003,ANN101,ANN102,ANN204,ANN206
+per-file-ignores =
+    **/tests/**:D1,S106,ANN
