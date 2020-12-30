@@ -7,6 +7,12 @@ repos:
         -   id: check-yaml
         -   id: mixed-line-ending
 
+    -   repo: https://github.com/psf/black
+        rev: stable
+        hooks:
+        - id: black
+          language_version: python3
+
     -   repo: local
         hooks:
         -   id: flake8
