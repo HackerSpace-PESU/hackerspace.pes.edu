@@ -1,0 +1,24 @@
+repos:
+    -   repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v3.2.0
+        hooks:
+        -   id: trailing-whitespace
+        -   id: end-of-file-fixer
+        -   id: check-yaml
+        -   id: mixed-line-ending
+
+    -   repo: https://github.com/psf/black
+        rev: stable
+        hooks:
+        - id: black
+          language_version: python3
+
+    -   repo: local
+        hooks:
+        -   id: flake8
+            name: Flake8
+            description: Run flake8 within env.
+            entry: pipenv run flake8
+            language: python
+            types: [python]
+            require_serial: true
