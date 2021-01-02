@@ -6,6 +6,9 @@ application_import_names=hackerspace_site
 exclude=__pycache__, venv, .venv, **/migrations/**, .cache/
 ignore=
     # Type Annotations
-    ANN002,ANN003,ANN101,ANN102,ANN204,ANN206
+    ANN002,ANN003,ANN101,ANN102,ANN204,ANN206,
+
+    # Import statements
+    F403, F401
 per-file-ignores =
     **/tests/**:D1,S106,ANN
