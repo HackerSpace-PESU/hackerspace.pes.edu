@@ -3,7 +3,7 @@ from django.core.handlers.wsgi import WSGIRequest
 from django.http import Http404, HttpResponse
 from django.shortcuts import redirect, render
 from django.views import View
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 
 from .forms import NewBlogForm
 from .models import Blog
@@ -20,7 +20,7 @@ class SuperUserAccessMixin(UserPassesTestMixin):
 class NewBlog(SuperUserAccessMixin, View):
     """Blog creation view."""
 
-    template_name = "blog/new_blog.html"
+    template_name = "blog/blog_new.html"
 
     def get(self, request: WSGIRequest) -> HttpResponse:
         """HTTP GET: Return the view template."""
@@ -32,9 +32,7 @@ class NewBlog(SuperUserAccessMixin, View):
         blog = NewBlogForm(request.POST)
 
         if blog.is_valid():
-            obj = blog.save(commit=False)
-            obj.author = request.user
-            obj.save()
+            obj = blog.save()
             return redirect("blog-detail", title=obj.title)
 
         context = {"form": NewBlogForm}
@@ -44,10 +42,15 @@ class NewBlog(SuperUserAccessMixin, View):
 class DetailBlog(DetailView):
     """Blog detail view, display individual blogs."""
 
-    template_name = "blog/detail_blog.html"
+    template_name = "blog/blog_detail.html"
     model = Blog
     slug_field = "title"
     slug_url_kwarg = "title"
+
+
+class ListBlog(ListView):
+    model = Blog
+    queryset = Blog.objects.all()
 
 
 class UpdateBlog(SuperUserAccessMixin, View):
@@ -58,7 +61,7 @@ class UpdateBlog(SuperUserAccessMixin, View):
         blog = Blog.objects.get(title=title)
         form = NewBlogForm(instance=blog)
         context = {"form": form}
-        return render(request, "blog/update.html", context)
+        return render(request, "blog/blog_update.html", context)
 
     def post(self, request: WSGIRequest, title: str) -> HttpResponse:
         """HTTP POST: Process blog modification."""
@@ -70,4 +73,4 @@ class UpdateBlog(SuperUserAccessMixin, View):
 
         context = {"form": form}
 
-        return render(request, "blog/update.html", context)
+        return render(request, "blog/blog_update.html", context)

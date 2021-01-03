@@ -10,6 +10,9 @@
 {% block content %}
   <form class="form" method="post">{% csrf_token %}
     <div class="form-group">
+      {{ form.author }}
+    </div>
+    <div class="form-group">
       {{ form.title }}
     </div>
     <div class="form-group">
