@@ -5,4 +5,5 @@ urlpatterns = [
     path("martor/", include("martor.urls")),
     path("admin/", admin.site.urls),
     path("", include("hackerspace_site.apps.blog.urls")),
+    path("", include("hackerspace_site.apps.home.urls")),
 ]
