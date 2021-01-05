@@ -2,16 +2,13 @@ setup:
   addons:
     - plan: heroku-postgresql
       as: DATABASE
-
 build:
   docker:
     web: Dockerfile
-
 release:
   image: web
   command: 
     - ./pre-deploy.sh
-
 run:
   web: gunicorn --bind 0.0.0.0:$PORT 'hackerspace_site.wsgi'
   # web: python manage.py runserver 0.0.0.0:$PORT
