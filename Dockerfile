@@ -5,4 +5,4 @@ ADD Pipfile .
 ADD Pipfile.lock .
 RUN ["pipenv", "install", "--system", "--deploy"]
 ADD . .
-ENTRYPOINT gunicorn --bind 0.0.0.0:$PORT hackerspace_site.wsgi:application
+# ENTRYPOINT gunicorn --bind 0.0.0.0:$PORT hackerspace_site.wsgi:application
