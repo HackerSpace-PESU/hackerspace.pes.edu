@@ -4,10 +4,10 @@ setup:
       as: DATABASE
 build:
   docker:
-    website: Dockerfile
-# release:
-#   image: website
-#   command: 
-#     - ./pre-deploy.sh
+    web: Dockerfile
+release:
+  image: web
+  command: 
+    - ./pre-deploy.sh
 run:
-  website: gunicorn --bind 0.0.0.0:$PORT 'hackerspace_site.wsgi.py:application'
+  web: gunicorn --bind 0.0.0.0:$PORT 'hackerspace_site.wsgi.py:application'
