@@ -6,4 +6,3 @@ heroku.yml
 .pre-commit-config.yaml
 .flake8
 README.md
-hackerspace_site/apps/*/migrations
