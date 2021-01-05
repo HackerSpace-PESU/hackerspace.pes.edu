@@ -10,4 +10,4 @@ release:
   command: 
     - ./pre-deploy.sh
 run:
-  website: gunicorn 'hackerspace_site.wsgi.py:application'
+  website: gunicorn 0.0.0.0:80 'hackerspace_site.wsgi.py:application'
