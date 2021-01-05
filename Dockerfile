@@ -1,7 +1,9 @@
 FROM python:3.8-alpine
 WORKDIR /src
-ADD requirements.txt .
-RUN ["pip", "install", "-r", "requirements.txt"]
+RUN ["pip", "install", "pipenv"]
+ADD Pipfile .
+ADD Pipfile.lock .
+RUN ["pipenv", "install", "--system", "--deploy"]
 ADD . .
 RUN ["python", "manage.py", "makemigrations"]
 RUN ["python", "manage.py", "migrate"]
