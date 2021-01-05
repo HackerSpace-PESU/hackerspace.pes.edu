@@ -14,8 +14,10 @@ class Author(models.Model):
 
 class Blog(models.Model):
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, blank=True, null=True)
+    created_on = models.DateField(auto_now_add=True)
     title = models.CharField(max_length=128, unique=True)
     blog_in_markdown = MartorField()
+    archived = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

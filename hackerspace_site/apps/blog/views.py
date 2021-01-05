@@ -35,7 +35,7 @@ class NewBlog(SuperUserAccessMixin, View):
             obj = blog.save()
             return redirect("blog-detail", title=obj.title)
 
-        context = {"form": NewBlogForm}
+        context = {"form": blog}
         return render(request, self.template_name, context)
 
 
@@ -74,3 +74,14 @@ class UpdateBlog(SuperUserAccessMixin, View):
         context = {"form": form}
 
         return render(request, "blog/blog_update.html", context)
+
+
+class ToggleArchiveBlog(SuperUserAccessMixin, View):
+    """Archive blog."""
+
+    def get(self, request: WSGIRequest, title: str) -> HttpResponse:
+        """HTTP GET: Archive blog post."""
+        blog = Blog.objects.get(title=title)
+        blog.archived = not blog.archived
+        blog.save()
+        return redirect("blog-list")
