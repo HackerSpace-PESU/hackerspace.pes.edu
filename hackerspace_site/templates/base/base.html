@@ -2,11 +2,14 @@
 <html lang="en-us">
 <head>
   <title>{% block title %}xyz{% endblock %}</title>
-  <link href="{% static 'plugins/css/bootstrap.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-  <style>.main-container {margin-top: 3em}</style>
   {% block css %}{% endblock %}
+
+  <link href="{% static 'plugins/css/bootstrap.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" type="text/css" media="all" rel="stylesheet" />
+  <style>.main-container {margin-top: 3em}</style>
 </head>
 <body>
+  {% include "base/_navbar.html" %}
   <div class="ui container main-container">
     <div class="main-content">
       {% block messages %}
@@ -28,5 +31,6 @@
   <script type="text/javascript" src="{% static 'plugins/js/jquery.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'plugins/js/bootstrap.min.js' %}"></script>
   {% block js %}{% endblock %}
+  {% include "base/_footer.html" %}
 </body>
 </html>
