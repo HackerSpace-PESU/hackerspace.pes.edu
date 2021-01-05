@@ -10,10 +10,21 @@
 
 {% block content %}
   <div class="martor-content">
-    <h3>Title: {{ object.title }}</h3>
+    <h3>Title: {{ blog.title }}</h3>
+    {% if request.user.is_superuser  %}
+        <a href="{% url 'blog-archive' title=blog.title %}">
+            <button class="btn btn-warning">
+                {% if blog.archived %}
+                    Unarchive
+                {% else %}
+                    Archive
+                {% endif %}
+            </button>
+        </a>
+    {% endif %}
     <hr />
     <div class="martor-preview">
-      {{ object.blog_in_markdown|safe_markdown }}
+      {{ blog.blog_in_markdown|safe_markdown }}
     </div>
   </div>
 {% endblock %}

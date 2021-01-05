@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import Http404, HttpResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.views import View
 from django.views.generic import DetailView, ListView
 
@@ -39,13 +39,14 @@ class NewBlog(SuperUserAccessMixin, View):
         return render(request, self.template_name, context)
 
 
-class DetailBlog(DetailView):
+class DetailBlog(View):
     """Blog detail view, display individual blogs."""
 
-    template_name = "blog/blog_detail.html"
-    model = Blog
-    slug_field = "title"
-    slug_url_kwarg = "title"
+    def get(self, request: WSGIRequest, title: str) -> HttpResponse:
+        blog = get_object_or_404(Blog, title=title)
+        if not blog.archived or request.user.is_superuser:
+            return render(request, "blog/blog_detail.html", {"blog": blog})
+        raise Http404()
 
 
 class ListBlog(ListView):
