@@ -9,5 +9,5 @@ release:
   image: web
   command: 
     - ./pre-deploy.sh
-run:
-  web: "gunicorn --bind 0.0.0.0:$PORT 'hackerspace_site.wsgi.py:application'"
+# run:
+#   web: "gunicorn --bind 0.0.0.0:$PORT 'hackerspace_site.wsgi.py:application'"
