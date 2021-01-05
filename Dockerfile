@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python:3.8-slim-buster
 WORKDIR /src
 RUN ["pip", "install", "pipenv"]
 ADD Pipfile .
