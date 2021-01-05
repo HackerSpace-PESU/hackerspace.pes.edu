@@ -5,9 +5,9 @@ setup:
 build:
   docker:
     website: Dockerfile
-release:
-  image: website
-  command: 
-    - ./pre-deploy.sh
+# release:
+#   image: website
+#   command: 
+#     - ./pre-deploy.sh
 run:
-  website: gunicorn 0.0.0.0:80 'hackerspace_site.wsgi.py:application'
+  website: gunicorn --bind 0.0.0.0:$PORT 'hackerspace_site.wsgi.py:application'
