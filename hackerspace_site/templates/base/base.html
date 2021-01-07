@@ -1,0 +1,36 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>{% block title %}xyz{% endblock %}</title>
+  {% block css %}{% endblock %}
+
+  <link href="{% static 'plugins/css/bootstrap.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" type="text/css" media="all" rel="stylesheet" />
+  <style>.main-container {margin-top: 3em}</style>
+</head>
+<body>
+  {% include "base/_navbar.html" %}
+  <div class="ui container main-container">
+    <div class="main-content">
+      {% block messages %}
+        {% if messages %}
+          <div class="messages">
+            {% for message in messages %}
+              <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+
+  <script type="text/javascript" src="{% static 'plugins/js/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'plugins/js/bootstrap.min.js' %}"></script>
+  {% block js %}{% endblock %}
+  {% include "base/_footer.html" %}
+</body>
+</html>

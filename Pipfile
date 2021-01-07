@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 django = "*"
 django-environ = "*"
+martor = "*"
 
 [dev-packages]
 flake8 = "*"
