@@ -22,5 +22,6 @@ flake8-import-order = "*"
 python_version = "3.8"
 
 [scripts]
+start = "python manage.py runserver"
 lint = "pre-commit run --all-files"
 precommit = "pre-commit install"
