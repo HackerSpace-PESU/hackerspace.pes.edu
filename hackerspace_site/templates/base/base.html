@@ -1,11 +1,14 @@
-{% load static %}<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <title>{% block title %}xyz{% endblock %}</title>
+  <title>{% block title %}HackerSpace{% endblock %}</title>
   {% block css %}{% endblock %}
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="{% static 'plugins/css/bootstrap.min.css' %}" type="text/css" media="all" rel="stylesheet" />
   <link href="{% static 'css/style.css' %}" type="text/css" media="all" rel="stylesheet" />
+  <!-- Icon that is visible on the tab -->
+  <link rel="icon" href="../../static/images/icon.png">
   <style>.main-container {margin-top: 3em}</style>
 </head>
 <body>
@@ -31,6 +34,8 @@
   <script type="text/javascript" src="{% static 'plugins/js/jquery.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'plugins/js/bootstrap.min.js' %}"></script>
   {% block js %}{% endblock %}
+
   {% include "base/_footer.html" %}
+  
 </body>
 </html>

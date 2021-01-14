@@ -1,3 +1,61 @@
-<footer>
-    <h6>Hackerspace website built using Django.</h6>
-</footer>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CDN for fontawesome library  -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!--Footer for the Webpage-->
+<div class="footer">  
+  <div class="column">
+        <p class="content">&#60;/HackerSpace&#62;</p>
+        <img src='../../static/images/motto.png' alt="Community Powered Development" class="motto">
+    </div>
+    <div class="footerSpace"></div>
+    <div class="column">
+        <center>
+        <p class="footerHeader">Address</p>
+        <p class="footerText">PES University, RR Campus </p>
+        <p class="footerText">100 Feet Ring Road, BSK III Stage </p>
+        <p class="footerText">Bangalore-560085 Karnataka, India</p> 
+        <br>
+        <p style="font-size: 10px;">© HackerSpace 2021</p> 
+        </center>
+    </div>
+  <div class="footerSpace"></div>
+  <div class="column">
+      <p class="footerHeader">Connect with us</p>
+      <div class="row">
+        <div id="github">
+            <a
+              class="footerIcon"
+              href="https://github.com/HackerSpace-PESU"
+              target="_blank"
+              ><i id="github" class="fab fa-github"></i
+            ></a>
+          </div>
+          <div id="instagram">
+            <a
+              class="footerIcon"
+              href="https://www.instagram.com/peshackerspace/"
+              target="_blank"
+              ><i id="instagram" class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div id="mail">
+            <a
+              class="footerIcon"
+              href="mailto:hackerspace@pes.edu"
+              target="_blank"
+              ><i id="mail" class="fas fa-at"></i
+            ></a>
+          </div>
+          <div id="discord">
+            <a
+              class="footerIcon"
+              href="https://discord.com/invite/zEpxPnP"
+              target="_blank"
+              ><i id="discord" class="fab fa-discord"></i
+            ></a>
+          </div>
+      </div>
+  </div>
+</div>

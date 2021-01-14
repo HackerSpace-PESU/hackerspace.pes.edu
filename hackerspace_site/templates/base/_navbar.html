@@ -1,25 +1,49 @@
-<nav id="navbar">
-    <ul>
-        <li><a href="{% url 'home' %}">
-            HackerSpace
-        </a></li>
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CDN for fontawesome library  -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+ <nav class="navBar">
+    <a href="{% url 'home' %}" style="text-decoration: none;">
+        <span class="logo">HackerSpace</span>
+    </a>
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+    <ul class="navList">
+      <li class="navItem">
+        <a href="{% url 'home' %}" class="navLink">Home</a>
+      </li>
+      <li class="navItem">
+        <a href="{% url 'blog-list' %}" class="navLink">Blog</a>
+      </li>
+      <!-- <li class="navItem">
+        <a href="/" class="navLink">Mentors</a>
+      </li>
+      <li class="navItem">
+        <a href="/" class="navLink">Domains</a>
+      </li>
+      <li class="navItem">
+        <a href="/" class="navLink">Projects</a>
+      </li> -->
+      <li class="navItem">
+        <a href="{% url 'aboutus' %}" class="navLink">About Us</a>
+      </li>
     </ul>
-    <ul>
-        <li>
-            <a href="https://github.com/HackerSpace-PESU">Github</a>
-        </li>
-        <li>
-            <a href="#">About</a>
-        </li>
-        <li>
-            <a href="#">Projects</a>
-        </li>
-        <li>
-            <a href="{% url 'blog-list' %}">Blog</a>
-        </li>
-        <li>
-            <a href="#">Discord</a>
-        </li>
+    <script>
+        //Function to close the description card in mobile view
+        function closeDsc(){
+            document.getElementsByClassName("dscCard")[0].classList.toggle('active');
+        }
 
-    </ul>
+        function sidepanel(imglink , placename, description){
+            img = document.getElementById("sidepanelimg");
+            img.src=imglink;
+            place = document.getElementById("sidepanelplace");
+            place.innerHTML = placename;
+            des = document.getElementById("sidepaneldes");
+            des.innerHTML = description;
+            document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
 </nav>
