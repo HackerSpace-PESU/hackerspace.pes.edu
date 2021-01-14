@@ -1,38 +1,54 @@
-{% extends "base/base.html" %} {% block content %}
-<div class="blog-list-head">
-  <h1 class="blog-list-heading">Blogs</h1>
-  {% if request.user.is_authenticated and request.user.is_superuser %}
-  <a href="{% url 'blog-new' %}">
-    <button class="btn btn-success">New Blog</button>
-  </a>
-  {% endif %}
-</div>
-<div class="blog-list-container">
-  {% for blog in object_list %}
-    {% if not blog.archived %}
-      <div class="blog-list-title">
-        <a href="{% url 'blog-detail' title=blog.title %}">{{ blog.title }}</a>
-        <br>
-        <small>Created on {{ blog.created_on }}</small>
-        <p>By {{ blog.author }}</p>
-        {% if request.user.is_authenticated and request.user.is_superuser %}
-          <a href="{% url 'blog-archive' title=blog.title %}">
-            <button class="btn btn-warning">Archive</button>
-          </a>
-        {% endif %}
-      </div>
-    {% elif blog.archived and request.user.is_authenticated and request.user.is_superuser %}
-        <div class="blog-list-title">
-            <a href="{% url 'blog-detail' title=blog.title %}">{{ blog.title }}</a>
-            <br>
-            <small>Created on {{ blog.created_on }}</small>
-            <p>By {{ blog.author }}</p>
-            <a href="{% url 'blog-archive' title=blog.title %}">
-                <button class="btn btn-warning">Unarchive</button>
-            </a>
-        </div>
-    {% endif %}
-  {% endfor %}
-</div>
+<!-- Icon that is visible on the tab -->
+<link rel="icon" href="../../static/images/icon.png">
 
-{% endblock %}
+<!-- Background Image -->
+<div class="backgroundImage">
+
+{% extends "base/base.html" %} {% block content %}  
+
+  <div class="wcard">
+
+    <div class="blog-list-head">
+      <h1 class="blog-list-heading">Blogs</h1>
+      {% if request.user.is_authenticated and request.user.is_superuser %}
+      <a href="{% url 'blog-new' %}" >
+        <button class="btn btn-success">New Blog</button>
+      </a> 
+      {% endif %}
+    </div>
+    <div class="blog-list-container">
+      {% for blog in object_list %}
+        {% if not blog.archived %}
+          <div class="blog-list-title">
+            <a href="{% url 'blog-detail' title=blog.title %}"  class="blogLink" >{{ blog.title }}</a>
+              <br>
+              <small class="blog-list-text">Created on {{ blog.created_on }}</small>
+              <p class="blog-list-text">By {{ blog.author }}</p>
+              {% if request.user.is_authenticated and request.user.is_superuser %}
+                <a href="{% url 'blog-archive' title=blog.title %}">
+                  <button class="btn btn-warning">Archive</button>
+                </a>
+            
+            
+            {% endif %}
+          </div>
+        {% elif blog.archived and request.user.is_authenticated and request.user.is_superuser %}
+            <div class="blog-list-title">
+                <a href="{% url 'blog-detail' title=blog.title %}">{{ blog.title }}</a>
+                  <br>
+                  <small class="blog-list-text">Created on {{ blog.created_on }}</small>
+                  <p class="blog-list-text">By {{ blog.author }}</p>
+                  <a href="{% url 'blog-archive' title=blog.title %}">
+                      <button class="btn btn-warning">Unarchive</button>
+                  </a>
+            </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+
+
+  {% endblock %}
+
+</div>

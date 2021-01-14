@@ -1,39 +1,53 @@
-{% extends "base/base.html" %}
-{% load static %}
-{% load martortags %}
-{% block title %}Test Markdonify :: {{ block.super }}{% endblock %}
+<!-- Icon that is visible on the tab -->
+<link rel="icon" href="../../static/images/icon.png">
 
-{% block css %}
-  <link href="{% static 'plugins/css/ace.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-  <link href="{% static 'martor/css/martor.bootstrap.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-{% endblock %}
+<!-- Background Image -->
+<div class="backgroundImage">
 
-{% block content %}
-  <div class="martor-content">
-    <h3>Title: {{ blog.title }}</h3>
-    {% if request.user.is_superuser  %}
-        <a href="{% url 'blog-archive' title=blog.title %}">
-            <button class="btn btn-warning">
-                {% if blog.archived %}
-                    Unarchive
-                {% else %}
-                    Archive
-                {% endif %}
-            </button>
-        </a>
-    {% endif %}
-    <hr />
-    <div class="martor-preview">
-      {{ blog.blog_in_markdown|safe_markdown }}
+  {% extends "base/base.html" %}
+  {% load static %}
+  {% load martortags %}
+  {% block title %}Blog : {{ blog.title }}{% endblock %}
+
+  {% block css %}
+    <link href="{% static 'plugins/css/ace.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+    <link href="{% static 'martor/css/martor.bootstrap.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+  {% endblock %}
+
+  {% block content %}
+
+  <div class="wtcard">
+
+    <div class="martor-content">
+      <h1>{{ blog.title }}</h1>
+      {% if request.user.is_superuser  %}
+          <a href="{% url 'blog-archive' title=blog.title %}">
+              <button class="btn btn-warning">
+                  {% if blog.archived %}
+                      Unarchive
+                  {% else %}
+                      Archive
+                  {% endif %}
+              </button>
+          </a>
+      {% endif %}
+      <hr />
+      <div class="martor-preview">
+        {{ blog.blog_in_markdown|safe_markdown }}
+      </div>
     </div>
   </div>
-{% endblock %}
+  <br>
+  <br>
+  {% endblock %}
 
-{% block js %}
-  <script type="text/javascript" src="{% static 'plugins/js/highlight.min.js' %}"></script>
-  <script>
-    $('.martor-preview pre').each(function(i, block){
-        hljs.highlightBlock(block);
-    });
-  </script>
-{% endblock %}
+  {% block js %}
+    <script type="text/javascript" src="{% static 'plugins/js/highlight.min.js' %}"></script>
+    <script>
+      $('.martor-preview pre').each(function(i, block){
+          hljs.highlightBlock(block);
+      });
+    </script>
+  {% endblock %}
+
+</div>

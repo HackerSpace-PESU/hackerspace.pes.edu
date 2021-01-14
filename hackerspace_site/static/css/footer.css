@@ -1,0 +1,92 @@
+@font-face {
+    font-family: hackerspace;
+    src: url(../fonts/hackerspace.ttf);
+}
+.footer{
+    background-color: rgb(0, 74, 173);
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+  }
+  .footerIcon {
+    font-size: 25px;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    float: right;
+    justify-content: right;
+  }
+  .footerSpace {
+    width: 430px;
+  }
+  a.footerIcon:hover{
+    color: white;
+  }
+   #discord:hover{
+    color:rgb(254, 189, 89)
+   } 
+   #github:hover{
+     color:rgb(254, 189, 89)
+   } 
+   #instagram:hover{
+    color:rgb(254, 189, 89)
+   } 
+  #mail:hover{
+    color:rgb(254, 189, 89)
+   } 
+  .content {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: hackerspace;
+    padding: 10px;
+    padding-left: 30px;
+    letter-spacing: 1px;
+    color: white;
+  }
+  .column{
+      display: flex;
+      flex-direction: column;
+  }
+  .row{
+      display: flex;
+      flex-direction: row;
+  }
+  .motto{
+      height: 80px;
+  }
+  .footerHeader{
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 500;
+  }
+  .footerText{
+      font-size: 13px;
+  }
+  @media only screen and (max-width: 1100px) {
+  .footer{
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5px;
+      padding-left:15px ;
+      padding-right:15px ;
+  }
+  .footerSpace {
+    width: 0px;
+    height: 20px;
+  }
+  .footerIcon {
+    font-size:20px ;
+    margin-bottom: 30px;
+  } 
+  .footerText{
+    font-size: 10px;  
+  } 
+  .footerHeader{
+    font-size: 15px;
+  }  
+}

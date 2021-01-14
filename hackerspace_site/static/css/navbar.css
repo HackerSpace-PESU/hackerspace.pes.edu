@@ -1,0 +1,91 @@
+@font-face {
+    font-family: hackerspace;
+    src: url(../fonts/hackerspace.ttf);
+}
+.navBar {
+    background: rgb(0, 74, 173);
+    height: auto;
+    margin-right: 0px;
+  }
+  .logo {
+    color: white;
+    font-family: hackerspace;
+    font-size: 35px;
+    line-height: 8vh;
+    padding: 0 60px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  
+  .navList {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .navItem {
+    display: inline-block;
+    margin-top:15px
+  }
+  
+  .navLink {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left:20px;
+    padding-right:20px;
+    text-transform: uppercase;
+  }
+  
+  .navLink:hover {
+    color:rgb(254, 189, 89);
+    transition: 0.5s; 
+    text-decoration: none;
+  }
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+      margin-right: 10px;
+    }
+    .navList {
+      position: fixed;
+      width: 100%;
+      background:rgb(0, 74, 173,0.97);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+    .navBar{
+      justify-items:end;
+    }
+    .navItem {
+      display: block;
+      margin: 15px 0;
+      line-height: 30px;
+    }
+    .navLink {
+      font-size: 15px;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+    .logo {
+      font-size: 25px;
+      line-height: 8vh;
+      padding: 0 0px;
+    }
+}
