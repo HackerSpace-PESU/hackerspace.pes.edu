@@ -66,7 +66,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: column;;
+    flex-direction: column;
 } 
 
 .blog-list-title {
@@ -141,9 +141,12 @@ body {
 
 .h-header{
     font-family: 'Noto Sans', sans-serif;;
-    font-size: 60px;
+    /* font-size: 60px;  */
+    font-size: 85px;
     color: #262626;
     font-weight: 500;
+    width: 100%;
+    letter-spacing: 1px;
 }
 
 .h-mainImg{
@@ -157,11 +160,10 @@ body {
     color: #262626;
 }
 
-
 .h-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .img-container {
@@ -197,6 +199,7 @@ body {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
 }
 
+
 @media only screen and (max-width: 1100px) {
     .au-header{
         font-size: 25px;
@@ -219,7 +222,7 @@ body {
     }
     .au-logo{
         height: 200px;
-        margin-left: -20px;
+        padding-left:0px;
         margin-bottom: 30px;
     }
     .wtcard{
@@ -243,15 +246,19 @@ body {
         font-size: 20px;
     }
     
-    
-    /* .h-container{
-        flex-direction: row;
-    } */
+    .row{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
     
     .img-container {
         position: relative;
         text-align: center;
+        align-items: center;
+        align-content: center;
         padding:5px;
+        margin-left: 10vh;
     }
     
     .bottom-left {
@@ -268,6 +275,17 @@ body {
         width:300px;
         justify-self: center;
     }
-    
-    
+
+}
+
+@media only screen and (max-width: 320px) {
+    .img-container {
+        margin-left: 0vh;
+        padding:5px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .img-container {
+        margin-left: 5vh;
+    }
 }

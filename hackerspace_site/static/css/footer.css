@@ -8,6 +8,7 @@
     color: white;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 5px;
     padding-left: 30px;
     padding-right: 30px;
@@ -20,9 +21,6 @@
     padding-left: 10px;
     float: right;
     justify-content: right;
-  }
-  .footerSpace {
-    width: 430px;
   }
   a.footerIcon:hover{
     color: white;
@@ -38,7 +36,7 @@
    } 
   #mail:hover{
     color:rgb(254, 189, 89)
-   } 
+   }  
   .content {
     font-size: 20px;
     font-weight: 500;
@@ -75,10 +73,6 @@
       padding-left:15px ;
       padding-right:15px ;
   }
-  .footerSpace {
-    width: 0px;
-    height: 20px;
-  }
   .footerIcon {
     font-size:20px ;
     margin-bottom: 30px;
@@ -88,5 +82,8 @@
   } 
   .footerHeader{
     font-size: 15px;
+  }
+  .motto{
+    margin-bottom: 20px;
   }  
 }
