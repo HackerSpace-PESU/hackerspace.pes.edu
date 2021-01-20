@@ -16,17 +16,17 @@
     font-weight: 500;
     letter-spacing: 1px;
   }
-  
+
   .navList {
     float: right;
     margin-right: 20px;
   }
-  
+
   .navItem {
     display: inline-block;
     margin-top:15px
   }
-  
+
   .navLink {
     color: white;
     font-size: 17px;
@@ -35,10 +35,10 @@
     padding-right:20px;
     text-transform: uppercase;
   }
-  
+
   .navLink:hover {
     color:rgb(254, 189, 89);
-    transition: 0.5s; 
+    transition: 0.5s;
     text-decoration: none;
   }
   .checkbtn {
@@ -50,7 +50,7 @@
     cursor: pointer;
     display: none;
   }
-  
+
   #check {
     display: none;
   }

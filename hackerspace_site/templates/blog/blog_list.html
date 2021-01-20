@@ -4,7 +4,7 @@
 <!-- Background Image -->
 <div class="backgroundImage">
 
-{% extends "base/base.html" %} {% block content %}  
+{% extends "base/base.html" %} {% block content %}
 
   <div class="wcard">
 
@@ -13,7 +13,7 @@
       {% if request.user.is_authenticated and request.user.is_superuser %}
       <a href="{% url 'blog-new' %}" >
         <button class="btn btn-success">New Blog</button>
-      </a> 
+      </a>
       {% endif %}
     </div>
     <div class="blog-list-container">
@@ -28,8 +28,8 @@
                 <a href="{% url 'blog-archive' title=blog.title %}">
                   <button class="btn btn-warning">Archive</button>
                 </a>
-            
-            
+
+
             {% endif %}
           </div>
         {% elif blog.archived and request.user.is_authenticated and request.user.is_superuser %}

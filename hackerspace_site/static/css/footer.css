@@ -27,16 +27,16 @@
   }
    #discord:hover{
     color:rgb(254, 189, 89)
-   } 
+   }
    #github:hover{
      color:rgb(254, 189, 89)
-   } 
+   }
    #instagram:hover{
     color:rgb(254, 189, 89)
-   } 
+   }
   #mail:hover{
     color:rgb(254, 189, 89)
-   }  
+   }
   .content {
     font-size: 20px;
     font-weight: 500;
@@ -76,14 +76,14 @@
   .footerIcon {
     font-size:20px ;
     margin-bottom: 30px;
-  } 
+  }
   .footerText{
-    font-size: 10px;  
-  } 
+    font-size: 10px;
+  }
   .footerHeader{
     font-size: 15px;
   }
   .motto{
     margin-bottom: 20px;
-  }  
+  }
 }

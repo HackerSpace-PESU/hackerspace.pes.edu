@@ -13,13 +13,17 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .backgroundImage{
     background-image: url('../../static/images/wall3.jpg');
     background-size:cover;
 }
 
 .wcard{
-    background-color: rgb(242, 242, 242,0.9); 
+    background-color: rgb(242, 242, 242,0.9);
     padding: 30px;
     border-radius: 8px;
     padding-top:40px ;
@@ -27,7 +31,7 @@ body {
 }
 
 .wtcard{
-    background-color: rgb(255, 255, 255,0.8); 
+    background-color: rgb(255, 255, 255,0.8);
     padding: 30px;
     border-radius: 8px;
     padding-top:40px ;
@@ -67,7 +71,7 @@ body {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-} 
+}
 
 .blog-list-title {
     padding: 30px;
@@ -81,11 +85,11 @@ body {
 .blog-list-title a {
     font-size: 25px;
     color: white;
-} 
+}
 
  .blog-list-title:hover {
     transform: scale(1.01);
-} 
+}
 
 .blog-list-text{
     color: white;
@@ -121,7 +125,7 @@ body {
 }
 
 .au-wcard{
-    background-color: rgb(242, 242, 242,0.93); 
+    background-color: rgb(242, 242, 242,0.93);
     padding: 30px;
     padding-left:35;
     padding-right:35;
@@ -206,10 +210,10 @@ body {
         font-weight: 800;
     }
     .au-wcard{
-        background-color: rgb(242, 242, 242,0.93); 
+        background-color: rgba(242, 242, 242,0.93);
         padding: 20px;
         border-radius: 8px;
-    }    
+    }
     .au-container{
         display: flex;
         flex-direction: column-reverse;
@@ -230,28 +234,28 @@ body {
         border-radius: 8px;
         padding-top:10px ;
         padding-bottom: 10px;
-    }   
+    }
 
     /* Home Page */
 
     .h-header{
         font-size: 40px;
     }
-    
+
     .h-mainImg{
         height: 150px;
     }
-    
+
     .h-subheader{
         font-size: 20px;
     }
-    
+
     .row{
         flex-direction: column;
         align-content: center;
         align-items: center;
     }
-    
+
     .img-container {
         position: relative;
         text-align: center;
@@ -260,7 +264,7 @@ body {
         padding:5px;
         margin-left: 10vh;
     }
-    
+
     .bottom-left {
         font-size: 15px;
         bottom: 10px;

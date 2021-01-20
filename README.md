@@ -32,4 +32,4 @@ Hackerspace website and hackerspace blog.
     ```
 4. Start webserver
     - `pipenv run start`
-    - Note: make sure you migrate if you want to work with the database `python manage.py migrate`
+    - Note: make sure you migrate if you want to work with the database `pipenv run migrate`

@@ -1,20 +1,17 @@
-<!-- Icon that is visible on the tab -->
-<link rel="icon" href="../../static/images/icon.png">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base/base.html" %}
+{% load static %}
 
 <!-- Background Image -->
 <div class="backgroundImageH">
 
-    {% extends "base/base.html" %}
     {% block content %}
 
     <center>
-        <p class="h-header">Welcome to HackerSpace</p>  
+        <p class="h-header">Welcome to HackerSpace</p>
         <br>
-        <img class="h-mainImg" src="../../static/images/collab.png">    
+        <img class="h-mainImg" src="{% static 'images/collab.png' %}">
     </center>
-    
+
     <br>
     <br>
     <p class="h-subheader">Club Activities</p>
@@ -23,36 +20,36 @@
 
         <div class="row">
             <div class="img-container">
-                <img src="../../static/images/sessions.jpg" alt="Snow" class="act-img">
+                <img src="{% static 'images/sessions.jpg' %}" alt="Snow" class="act-img">
                 <div class="bottom-left">Sessions</div>
             </div>
-    
+
             <div class="img-container">
-                <img src="../../static/images/discussions.jpg" alt="Snow" class="act-img">
+                <img src="{% static 'images/discussions.jpg' %}" alt="Snow" class="act-img">
                 <div class="bottom-left">Discussions</div>
             </div>
-    
+
             <div class="img-container">
-                <img src="../../static/images/workshops.jpg" alt="Snow" class="act-img">
+                <img src="{% static 'images/workshops.jpg' %}" alt="Snow" class="act-img">
                 <div class="bottom-left">Workshops</div>
-            </div>    
+            </div>
         </div>
 
         <div class="row">
             <div class="img-container">
-                <img src="../../static/images/contests.jpg" alt="Snow" class="act-img">
+                <img src="{% static 'images/contests.jpg' %}" alt="Snow" class="act-img">
                 <div class="bottom-left">Contests</div>
             </div>
-    
+
             <div class="img-container">
-                <img src="../../static/images/osp.jpg" alt="Snow" class="act-img">
+                <img src="{% static 'images/osp.jpg' %}" alt="Snow" class="act-img">
                 <div class="bottom-left">Open-Source Projects</div>
             </div>
-    
+
             <div class="img-container">
-                <img src="../../static/images/internship.jpg" alt="Snow" class="act-img">
+                <img src="{% static 'images/internship.jpg' %}" alt="Snow" class="act-img">
                 <div class="bottom-left">Summer Internship Projects</div>
-            </div>    
+            </div>
         </div>
         <br>
         <br>
@@ -60,70 +57,70 @@
             <div class="h-container">
                 <div class="row">
                     <div class="img-container">
-                        <img src="../../static/images/ml.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/ml.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">Machine Learning</div>
                     </div>
-            
+
                     <div class="img-container">
-                        <img src="../../static/images/dl.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/dl.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">Deep Learning</div>
                     </div>
-            
+
                     <div class="img-container">
-                        <img src="../../static/images/computer-vision.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/computer-vision.jpg' %}images/computer-vision.jpg" alt="Snow" class="act-img">
                         <div class="bottom-left">Computer Vision</div>
-                    </div>    
+                    </div>
                 </div>
 
                 <div class="row">
                     <div class="img-container">
-                        <img src="../../static/images/nlp.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/nlp.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">Natural Language Processing</div>
                     </div>
-            
+
                     <div class="img-container">
-                        <img src="../../static/images/data-science.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/data-science.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">Data Science</div>
                     </div>
-            
+
                     <div class="img-container">
-                        <img src="../../static/images/app-development.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/app-development.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">App Development</div>
-                    </div>    
+                    </div>
                 </div>
 
                 <div class="row">
                     <div class="img-container">
-                        <img src="../../static/images/webdev.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/webdev.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">Web Development</div>
                     </div>
-            
+
                     <div class="img-container">
-                        <img src="../../static/images/linux.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/linux.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">Linux</div>
                     </div>
-            
+
                     <div class="img-container">
-                        <img src="../../static/images/android.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/android.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">Android Kernel Development</div>
-                    </div>    
+                    </div>
                 </div>
 
                 <div class="row">
                     <div class="img-container">
-                        <img src="../../static/images/web-scraping.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/web-scraping.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">Automation & Web Scraping</div>
                     </div>
-            
+
                     <div class="img-container">
-                        <img src="../../static/images/robotics.jpg" alt="Snow" class="act-img">
+                        <img src="{% static 'images/robotics.jpg' %}" alt="Snow" class="act-img">
                         <div class="bottom-left">Robotics</div>
                     </div>
                 </div>
             </div>
         <br>
     </div>
-    
+
 
     {% endblock %}
 

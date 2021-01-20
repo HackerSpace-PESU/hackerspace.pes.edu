@@ -1,11 +1,8 @@
-<!-- Icon that is visible on the tab -->
-<link rel="icon" href="../../static/images/icon.png">
+{% extends "base/base.html" %}
 
 <!-- Background Image -->
 <div class="backgroundImageAU">
-
-    {% extends "base/base.html" %}
-    {% block content %}
+{% block content %}
 
     <div class="au-wcard">
         <center><p class="au-header">What is HackerSpace?</p></center>
@@ -13,14 +10,14 @@
         <div class="au-container">
             <div class="au-text">
                 <p>
-                HackerSpace is a community-powered Development Club based in PES University, RR Campus which was formed in 2019 by the batch of ‘22. 
+                HackerSpace is a community-powered Development Club based in PES University, RR Campus which was formed in 2019 by the batch of ‘22.
                 At HackerSpace, we are more than a club. We are a Community.
-                
+
                 The Club aims to inspire peers and create a strong development-oriented community within the campus
                 by promoting community powered development.
                 <br><br>
-                Since we believe in collective growth and participation, all activities are organized by the peers, for the peers. 
-                We provide a platform for peers to interact with one another and work together to develop applications that can change lives. 
+                Since we believe in collective growth and participation, all activities are organized by the peers, for the peers.
+                We provide a platform for peers to interact with one another and work together to develop applications that can change lives.
                 <br><br>
                 Club Objectives:
                 <ul class="au-fix">
@@ -34,14 +31,14 @@
             </div>
             <div>
                 <center>
-                    <img class="au-logo" src="../../static/images/logo2.png">
+                    <img class="au-logo" src="{% static 'images/logo2.png' %}>
                 </center>
-                
+
             </div>
         </div>
-        </p>        
+        </p>
     </div>
     <br>
-    {% endblock %}
-    
+{% endblock %}
+
 </div>
