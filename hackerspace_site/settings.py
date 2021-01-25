@@ -52,16 +52,18 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # Security
     "django.middleware.security.SecurityMiddleware",
+    # Installed
+    "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # Others
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    # Installed
-    "corsheaders.middleware.CorsMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "hackerspace_site.urls"
@@ -139,6 +141,4 @@ STATICFILES_DIRS = [Path(BASE_DIR, "hackerspace_site", "static")]
 
 # CORS Settings
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    "https://devfolio.co/api/hackathons/spacejam-2021",  # Apply with devfolio button
-)
+CORS_ORIGIN_WHITELIST = ("https://devfolio.co",)  # Apply with devfolio button
