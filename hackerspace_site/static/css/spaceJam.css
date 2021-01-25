@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+
+/* Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --gutter: 0 5vw;
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navLink {
+  color: white;
+}
+
+ul {
+  margin: var(--gutter);
+  list-style: none;
+  display: flex;
+  padding: 3vh 0;
+  color: whitesmoke;
+  flex-wrap: wrap;
+}
+
+.logo {
+  flex: 2;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+
+.links {
+  flex: 0.8;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.links li:hover {
+  animation: 200ms onhover ease-in-out forwards;
+  cursor: pointer;
+}
+#demo {
+  color: whitesmoke;
+  font-family: "Major Mono Display", monospace;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  animation: 750ms onload ease-in-out forwards;
+}
+
+.section1 {
+  min-height: 100vh;
+
+  background: -webkit-linear-gradient(top right, #000000, rgb(0, 74, 173));
+  background: -moz-linear-gradient(top right, #000000, rgb(0, 74, 173));
+  background: linear-gradient(to bottom left, #000000, rgb(0, 74, 173));
+}
+
+.spaceJam {
+  margin: 10vh auto;
+  width: 50vw;
+  min-height: 44vh;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: 750ms onload ease-in-out forwards;
+  line-height: 50px;
+}
+
+.spaceJam img {
+  max-height: 45vh;
+}
+
+.spaceJam p {
+  color: white;
+  font-family: "Sigmar One", cursive;
+}
+
+.spaceJam p:first-child {
+  font-size: 5rem;
+  letter-spacing: 2px;
+}
+
+.spaceJam p:nth-child(2) {
+  font-size: 2rem;
+}
+
+@keyframes onhover {
+  to {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes onload {
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  /* min-height: 90vh; */
+  align-items: center;
+}
+
+.wcard {
+  /* background-color: rgb(242, 242, 242,0.9); */
+  background-color: rgb(26, 26, 26, 0.7);
+  padding: 30px;
+  border-radius: 8px;
+  margin: auto;
+  width: 70vw;
+}
+
+.cardContent {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.cardHeader {
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.accent {
+  color: #4bcccc;
+}
+
+.sponsors-logo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.sponsors-logo img{
+  padding: 15px;
+  max-height: 12vh;
+}
+
+/* Footer */
+
+.footer {
+  background-color: rgba(13, 13, 13, 0.7);
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+.footerIcon {
+  font-size: 25px;
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  float: right;
+  justify-content: right;
+}
+a.footerIcon:hover {
+  color: white;
+}
+#discord:hover {
+  color: #4bcccc;
+}
+#github:hover {
+  color: #4bcccc;
+}
+#instagram:hover {
+  color: #4bcccc;
+}
+#mail:hover {
+  color: #4bcccc;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "JetBrains Mono", monospace;
+  padding: 10px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.copyright {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 37, 0.8); /* color of the scroll thumb */
+  border-radius: 5px; /* roundness of the scroll thumb */
+}
+
+.date{
+  color: white;
+  font-size: 25px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+@media only screen and (max-width: 1100px) {
+  .navLink {
+    display: none;
+  }
+
+  .links {
+    font-size: 15px;
+    padding-left: 0px;
+  }
+
+  .spaceJam {
+    margin: 5vh auto;
+  }
+
+  .logo {
+    font-size: 25px;
+    margin-top: 2px;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    position: absolute;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footerIcon {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .wcard {
+    padding: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .cardContent {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .cardHeader {
+    font-size: 25px;
+  }
+
+  .spaceJam{
+    min-height: 15vh;
+  }
+
+  .spaceJam img {
+    max-height: 16vh;
+  }
+
+  #demo {
+    font-size: 20px;
+  }
+
+  .date{
+    font-size: 20px;
+  }
+
+  .sponsorsImages{
+    height: 70px;
+  }
+}

@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceJam-2021</title>
+    <link rel="stylesheet" href="{% static 'css/spaceJam.css'%}" />
+    <!-- Icon that is visible on the tab -->
+    <link rel="icon" href="../../static/images/icon.png">
+  </head>
+  <body>
+    <div class="main-container">
+      <section class="section1" id="Home">
+        <!-- Header -->
+        <nav>
+          <ul>
+            <!-- <a href="{% url 'home' %}" style="color: white;"> -->
+        
+                <li class="logo"><a href="{% url 'home' %}" class="logo" style="color: white;">&lt;/HackerSpace&gt;</a></li>
+        
+            <!-- </a> -->
+            <div class="links">
+              <a href="#Home" class="navLink"><li class="about">Home</li></a>
+              <a href="#AboutUs" class="navLink"
+                ><li class="about">About Us</li></a
+              >
+              <a href="#Contacts" class="navLink"
+                ><li class="contact">Contacts</li></a
+              >
+            </div>
+          </ul>
+        </nav>
+        <!-- SpaceJam logo -->
+        <div class="spaceJam">
+          <img src="../../static/images/spacejam/final_crop.png" alt="logo" />
+        </div>
+        <!-- Event Date -->
+        <center><p class="date">February 27-28,2021</p></center>
+        <br>
+        <!-- Timer -->
+        <p id="demo"></p>
+
+        <!-- Devfolio Button -->
+        <div
+          class="apply-button"
+          data-hackathon-slug="YOUR-HACKATHON-SLUG"
+          data-button-theme="dark-inverted"
+          style="height: 44px; width: 312px"
+        ></div>
+        <br>
+        <br>
+        <!-- About Us -->
+        <div class="container">
+          <div class="wcard" id="AboutUs">
+            <center><p class="cardHeader">About Us</p></center>
+            <br />
+            <center>
+              <p class="cardContent">
+                HackerSpace presents its first-ever hackathon -
+                <b class="accent">SpaceJam 2021</b>
+              </p>
+              <p class="cardContent">
+                The hackathon is open to all students of PES University. The
+                theme is <b class="accent">Open Innovation</b>, so build out on
+                the great ideas that you have to solve problems that you face
+                every day!
+              </p>
+              <p class="cardContent">
+                This Hackathon will be aimed at being
+                <b class="accent">beginner-friendly</b> that aims provide the
+                new batch of students with their first experience in ideating
+                and developing and to explore the world of hackathon.
+              </p>
+              <p class="cardContent">
+                We also aim to introduce them to new technologies in addition to
+                providing them with a challenge while also allowing experienced
+                pros to showcase their talents.
+              </p>
+              <p class="cardContent">
+                <b class="accent">THINK - CODE - INNOVATE</b>
+              </p>
+            </center>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- Sponsors -->
+        <div class="container">
+          <div class="wcard" id="Sponsors">
+            <center><p class="cardHeader">Our Sponsors</p></center>
+            <br />
+            <div class="sponsors-logo">
+              <img src="../../static/images/spacejam/Devfolio_Logo-White.png" alt="Devfolio" class="sponsorsImages" />
+              <img src="../../static/images/spacejam/Matic_Logo-White@2x.png" alt="Devfolio" class="sponsorsImages" />
+              <img src="../../static/images/spacejam/Portis_Logo-White.png" alt="Devfolio" class="sponsorsImages"/>
+              <img src="../../static/images/spacejam/Tezos_Logo-White.png" alt="Devfolio" class="sponsorsImages"/>
+              <!-- <img src="Devfolio_Logo-White.png" alt="Devfolio" /> -->
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <!-- footer -->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <div class="footer" id="Contacts">
+          <p class="content">&#60;/HackerSpace&#62;</p>
+          <p class="copyright">© SpaceJam 2021</p>
+          <div class="row">
+            <div id="github">
+              <a
+                class="footerIcon"
+                href="https://github.com/HackerSpace-PESU"
+                target="_blank"
+                ><i id="github" class="fab fa-github"></i
+              ></a>
+            </div>
+            <div id="instagram">
+              <a
+                class="footerIcon"
+                href="https://www.instagram.com/peshackerspace/"
+                target="_blank"
+                ><i id="instagram" class="fab fa-instagram"></i
+              ></a>
+            </div>
+            <div id="mail">
+              <a
+                class="footerIcon"
+                href="mailto:hackerspace@pes.edu"
+                target="_blank"
+                ><i id="mail" class="fas fa-at"></i
+              ></a>
+            </div>
+            <div id="discord">
+              <a
+                class="footerIcon"
+                href="https://discord.com/invite/zEpxPnP"
+                target="_blank"
+                ><i id="discord" class="fab fa-discord"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Feb 27, 2021 23:59:59").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+
+      // Mobile View for Navbar
+      function closeDsc() {
+        document
+          .getElementsByClassName("dscCard")[0]
+          .classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
