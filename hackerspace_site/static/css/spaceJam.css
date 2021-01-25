@@ -247,6 +247,15 @@ body::-webkit-scrollbar-thumb {
   font-family: "JetBrains Mono", monospace;
 }
 
+.infoLink{
+  color: white;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
 @media only screen and (max-width: 1100px) {
   .navLink {
     display: none;
@@ -291,6 +300,7 @@ body::-webkit-scrollbar-thumb {
   .cardContent {
     font-size: 15px;
     padding: 5px;
+    line-height: 1.2em;
   }
 
   .cardHeader {
