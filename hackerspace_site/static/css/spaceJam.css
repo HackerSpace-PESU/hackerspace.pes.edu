@@ -140,6 +140,7 @@ ul {
   color: white;
   font-size: 20px;
   padding: 15px 80px;
+  line-height: 1.8em;
 }
 
 .cardHeader {
@@ -299,6 +300,7 @@ body::-webkit-scrollbar-thumb {
   .cardContent {
     font-size: 15px;
     padding: 5px;
+    line-height: 1.2em;
   }
 
   .cardHeader {
