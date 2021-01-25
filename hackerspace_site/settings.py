@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "hackerspace_site.apps.blog",
     # installed
     "martor",
-    "corsheaders"
+    "corsheaders",
     # pre
     "django.contrib.admin",
     "django.contrib.auth",
@@ -60,8 +60,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # Installed
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "hackerspace_site.urls"
