@@ -139,8 +139,7 @@ ul {
 .cardContent {
   color: white;
   font-size: 20px;
-  padding: 15px 80px;
-  line-height: 1.8em;
+  padding: 10px;
 }
 
 .cardHeader {
@@ -246,6 +245,15 @@ body::-webkit-scrollbar-thumb {
   font-size: 25px;
   font-family: "JetBrains Mono", monospace;
 }
+
+.infoLink{
+  color: white;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 
 @media only screen and (max-width: 1100px) {
   .navLink {
