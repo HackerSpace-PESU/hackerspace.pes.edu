@@ -18,6 +18,9 @@
   text-decoration: none;
 }
 
+body{
+    overflow-x: hidden;
+}
 nav {
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -310,6 +313,6 @@ body::-webkit-scrollbar-thumb {
   }
 
   .sponsorsImages{
-    height: 70px;
+    height: 55px;
   }
 }
