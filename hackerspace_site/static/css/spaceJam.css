@@ -149,6 +149,12 @@ ul {
   font-weight: 600;
 }
 
+.sponsorsHeader{
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .accent {
   color: #4bcccc;
 }
@@ -307,6 +313,9 @@ body::-webkit-scrollbar-thumb {
     font-size: 25px;
   }
 
+  .sponsorsHeader{
+    font-size: 20px;
+  }
   .spaceJam{
     min-height: 15vh;
   }
