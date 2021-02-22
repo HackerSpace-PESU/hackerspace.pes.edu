@@ -98,7 +98,7 @@ a {
 /* About us Page */
 
 .backgroundImageAU{
-    background-image: url('../../static/images/aboutus.jpg');
+    background-image:url('../images/aboutus.jpg');
     background-size:cover;
 }
 
@@ -226,7 +226,7 @@ a {
     }
     .au-logo{
         height: 200px;
-        padding-left:0px;
+        padding-left:3px;
         margin-bottom: 30px;
     }
     .wtcard{
