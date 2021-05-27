@@ -1,8 +1,13 @@
-{% extends "base/base.html" %}
-
 <!-- Background Image -->
 <div class="backgroundImageAU">
-{% block content %}
+
+{% extends "base/base.html" %}
+{% load static %}
+<!-- Icon that is visible on the tab -->
+<link rel="icon" href="{% static 'images/icon.png' %}">
+
+
+    {% block content %}
 
     <div class="au-wcard">
         <center><p class="au-header">What is HackerSpace?</p></center>
@@ -31,7 +36,7 @@
             </div>
             <div>
                 <center>
-                    <img class="au-logo" src="{% static 'images/logo2.png' %}>
+                    <img class="au-logo" src="{% static 'images/logo2.png' %}">
                 </center>
 
             </div>
@@ -40,5 +45,4 @@
     </div>
     <br>
 {% endblock %}
-
 </div>
